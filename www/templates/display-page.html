@@ -1,0 +1,37 @@
+<ion-view view-title="{{data.name}}">
+  <ion-content class="display">
+
+      <div class="contant-area" >
+          <div class="prof-pic" >
+            <img src="{{data.icon}}" >
+            <br />
+            <h4>{{data.name}}</h4>
+          </div>
+          <p class="phara">{{data.description}}</p>
+      </div>
+      <div class="list card details">
+          <a class="item item-icon-left" ng-click="">
+             <i class="icon ion-location"></i>
+             <span>Location</span>
+          </a>
+          <a class="item item-icon-left" ng-click="" href="#/app/map">
+             <i class="icon ion-navigate"></i>
+             <span>Get directions</span>
+          </a>
+      </div>  
+      <div class="div" style="display:block" >
+          <a class="contact button" href="tel:{{data.phone}}" target="_blank">
+           
+             <i class=" ion-ios-telephone ionic-class" ></i>
+             <br />
+              <h4>CALL</h4>
+          </a>
+          <a class="contact button" href="mailto:{{data.email}}" target="_blank">
+              
+             <i class="ion-email ionic-class" ></i>
+             <br /> 
+                <h4>CONTACT</h4>
+          </a>
+      </div>
+  </ion-content>
+</ion-view>

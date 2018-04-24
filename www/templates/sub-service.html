@@ -1,0 +1,19 @@
+<ion-view  view-title="{{title.service_name}}">
+  <ion-content class="sub-service">
+
+      <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search"  ng-model="query">
+      </label>
+    </div>
+
+        <div class="list" ng-repeat="sub in data  | filter:query" >
+            <a class="item item-thumbnail-left" href="#/app/display-page/{{sub.id}}" >
+              <img ng-src="{{ sub.icon }}">
+              <h2>{{sub.name}}</h2>
+              <p>{{sub.description}}</p>
+            </a>
+        </div>
+  </ion-content>
+</ion-view>

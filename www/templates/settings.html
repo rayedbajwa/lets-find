@@ -1,0 +1,37 @@
+<ion-view view-title="Settings">
+    
+  <ion-content >
+   <div class="settings-page" ng-app="settingCtrl">
+     <div class="help"> 
+      <h4>Help Contact</h4>
+        <ion-list ng-repeat="contact in data.help">
+       <ion-item class="item-icon-left">{{contact.name}} {{contact.number}}
+          
+         </ion-item>
+            
+         </ion-list>
+         <ion-item>
+       <a class="button addbutton" ng-click="addContact()"><i class="icon ion-person-add"></i>{{buttontitle}}</a></ion-item></div>
+       
+        <div class="help"> 
+            
+            <h4>Other Contacts</h4>
+            <ion-toggle ng-model="shouldShowDelete">
+  Show Delete?
+</ion-toggle>
+      <ion-list  show-delete="shouldShowDelete">
+      <ion-item  ng-repeat="contact in data.others">
+    {{contact.name}} {{contact.number}}
+         <ion-delete-button  ng-click="delete_contact({{contact.id}}) " class="ion-minus-circled"></ion-delete-button> 
+       </ion-item>  </ion-list>
+            
+            
+            <div class="item">
+       <a class="button addbutton" ng-click="addOtherContacts()"><i class="icon ion-person-add"></i>{{Otherbuttontitle}}</a>
+            
+            </div>
+       
+       </div>
+      </div>
+  </ion-content> 
+</ion-view>

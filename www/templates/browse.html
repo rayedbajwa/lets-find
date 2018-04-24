@@ -1,0 +1,22 @@
+<ion-view  view-title="{{title}}">
+
+  <ion-content >
+
+      <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search" ng-model="query">
+      </label>
+    </div>
+
+        <div class="list" ng-repeat="contact in data  | filter:query">
+
+            <a class="item item-thumbnail-left" href="#/app/sub-service/{{contact.id}}" >
+              <img ng-src="{{ contact.icon }}">
+              <h2>{{contact.service_name}}</h2>
+              <p>{{contact.description}}</p>
+              <p>{{contact.location}}</p>
+            </a>
+        </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,19 @@
+<ion-view title="Page">
+    <ion-content padding="true" class="has-header has-footer">
+        <form name="loginForm" ng-submit="$scope.login($scope.user);" novalidate>
+            <label class="item item-input">
+                <span class="input-label">name</span>
+                <input type="text" placeholder="name" ng-model="$scope.user.username" form-validate-after>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">email</span>
+                <input type="email" placeholder="email" ng-model="$scope.user.email" form-validate-after>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">password</span>
+                <input type="password" placeholder="password" ng-model="$scope.user.password" form-validate-after>
+            </label>
+        </form>
+        <button class="button button-balanced button-block">check validation</button>
+    </ion-content>
+</ion-view>

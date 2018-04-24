@@ -1,0 +1,43 @@
+<ion-view view-title="Services">
+  <ion-content>
+      <ul class="home-list-style services-list">
+          <!-- <li class="button"  >
+             <img src="img/refreal-doc.png" >
+           
+                 <h3>Henvisning fra lege</h3>
+           </li>
+            
+           <li class="button"  >
+           <a href="#/app/rights" >
+             <img src="img/right.png" >
+           
+                 <h3>Mine rettigheter</h3>
+                 </a>
+           </li>
+           
+           
+           <li class="button">
+             <a  href="#/app/help">
+               <img src="img/plus.png">
+                 <h3>Help</h3>
+             </a>
+           </li>
+                
+           <li class="button">
+             <a href="#/app/kontakter" >
+               <img src="img/contact.png" >
+                 <br/>
+                 <h3>Kontakter</h3>
+             </a>
+           </li>  --> 
+
+          
+            <li ng-repeat="service in data" class="button" ng-click="openContacts(service.id)" >
+              <div class="contact_img">
+                <img src="{{service.icon}}" >
+              </div>
+              <h3>{{service.name}}</h3>
+            </li>
+      </ul>
+  </ion-content>
+</ion-view>

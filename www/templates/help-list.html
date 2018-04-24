@@ -1,0 +1,23 @@
+<ion-view  view-title="{{title}}">
+  <ion-content  >
+
+      <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search" ng-model="query">
+      </label>
+    </div>
+
+        <div class="list" ng-repeat="contact in data.others">
+           <div class="item item-button-right">
+
+
+              <h2>{{contact.name}}</h2>
+              <p>{{contact.number}}</p>
+                            <a class="button button-positive call" href="tel:{{contact.number}}" >
+                 <i class="icon call-icon ion-ios-telephone"></i>
+            </a>
+            </div>
+        </div>
+  </ion-content>
+</ion-view>

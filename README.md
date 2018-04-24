@@ -23,6 +23,8 @@ Android SDK and simlator
 Use ionic basic commands:
 
 ```
+npm i
+bower i
 ionic cordova build [<platform>] | ios | android
 ionic serve | For development
 ```
